@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import styles from './item.module.css';
+import styles from './Item.module.css';
 
 class Item extends Component {
     state = {
