@@ -1,0 +1,34 @@
+.aboutimg {
+    width: 100%;
+    height: auto;
+    /* float: right;    */
+}
+
+.about h2 {
+    font-size: 25px;
+    color: #003874;
+    font-weight: 600;
+}
+.about p {
+    line-height: 32px;
+}
+
+.about {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    direction: rtl;
+    text-align: right;
+    display: table;
+    padding-bottom: 50px;
+}
+
+.aboutContainer {
+    width: 45%;
+    padding-right: 15px;
+    margin-right: 10%;
+}
+
+.about div {
+    display: table-cell;
+}
