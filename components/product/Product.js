@@ -136,7 +136,7 @@ class Product extends Component {
                         { url: '/images/sets/100044/s1.jpg', caption: 'set' },
                     ]
                 });
-         
+
             case ("100050"):
                 return this.setState({
                     pics: [
@@ -158,6 +158,20 @@ class Product extends Component {
                         { url: '/images/sets/100054/s2.jpg', caption: 'set' },
                     ]
                 });
+            case ("Cartie"):
+                return this.setState({
+                    pics: [
+                        { url: '/images/pen/carteie/01.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/02.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/03.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/04.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/05.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/06.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/07.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/08.jpg', caption: 'Cartie' },
+                        { url: '/images/pen/carteie/09.jpg', caption: 'Cartie' },
+                    ]
+                });
         }
     }
     render() {
@@ -168,14 +182,14 @@ class Product extends Component {
                         <div className={`col-md-12 ${styles.header}`}>
                             <h2>
                                 <img src="/images/home/category-sign.svg" alt="" />
-                                 {this.props.title}
+                                {this.props.title}
                             </h2>
 
                         </div>
 
                     </div>
                 </header>
-                <ProductSlider pics={this.state.pics} />
+                <ProductSlider pics={this.state.pics} name={this.props.title}/>
 
             </section>
         );
