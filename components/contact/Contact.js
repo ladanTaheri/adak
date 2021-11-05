@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import styles from './Contact.module.css';
+import MyMap from './Map';
 class Contact extends Component {
     state = {}
     render() {
@@ -11,14 +12,15 @@ class Contact extends Component {
                     <address>
                         <i className={`fa fa-map-marker ${styles.icons}`}></i>
 
-                              خیابان جمهوری-نرسیده به میدان بهارستان-پلاک ۲۹ فروشگاه قلم
+                        خیابان جمهوری-نرسیده به میدان بهارستان-پلاک ۲۹ فروشگاه قلم
 
-                        </address>
+                    </address>
+                    
                     <p className={styles.links}>
                         <i className={`fa fa-phone ${styles.icons}`}></i>
 
                         <a href="tel:+982133995710"> 021-33995710</a> |
-                              <a href="tel:+982133995831"> 021-33995831</a>
+                        <a href="tel:+982133995831"> 021-33995831</a>
 
 
                     </p>
@@ -29,6 +31,9 @@ class Contact extends Component {
                     </p>
 
                 </section>
+                <div className={styles.contact_page_map}>
+                        <MyMap />
+                    </div>
                 <div className={styles.messageBox}>
                     <div>
                         <h4 className={styles.message}>ارسال پیام</h4>
@@ -65,8 +70,9 @@ class Contact extends Component {
 
                     </div>
                 </div>
+
             </section>
-        
+
         );
 
     }
