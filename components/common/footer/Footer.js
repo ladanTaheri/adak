@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Footer.module.css';
+import Link from 'next/link';
+
 
 class Footer extends Component {
     state = {}
@@ -11,24 +13,43 @@ class Footer extends Component {
                         <img src="/images/footer/pen.png" className="img-fluid" alt="" />
                     </div>
                     <div className="col-md-4 col-sm-12">
-                        <h5 className={styles.title}>دسترسی سریع</h5>
+                        {/* <h5 className={styles.title}>دسترسی سریع</h5> */}
                         <div className="row">
-                            <div className={`col-md-6 ${styles.links}`}>
+                            {/* <div className={`col-md-6 ${styles.links}`}>
                                 <ul>
-                                    <li><a href="#">سالنامه اداک</a></li>
+                                 <li><a href="#">سالنامه اداک</a></li>
                                     <li><a href="#">ست های مدیریتی</a></li>
-                                    <li><a href="#">قلم های نفیس Carteie</a></li>
-                                    <li><a href="#">قلم های نفیس Delta</a></li>
+                                    <li><a href="#">قلم های نفیس Carteie</a></li> 
+                                  <li><a href="#">قلم های نفیس Delta</a></li>
                                     <li><a href="#">قلم های نفیس Sheaffer</a></li>
                                     <li><a href="#">قلم های نفیس Forever</a></li>
                                     <li><a href="#">قلم های نفیس Cross</a></li>
-                                    <li><a href="#">قلم های نفیس Melody</a></li>
-                                    <li><a href="#">پاوربنک</a></li>
+                                    <li><a href="#">قلم های نفیس Melody</a></li> 
+                                   <li><a href="#">پاوربنک</a></li> 
                                 </ul>
-                            </div>
+                            </div> */}
                             <div className={`col-md-6 ${styles.links}`}>
+                                <h5 className={styles.title}>دسترسی سریع</h5>
+
                                 <ul>
-                                    <li><a href="#">جاکلیدی</a></li>
+                                    <li>
+                                        <Link href='/products/[name]' as='/products/سالنامه'><a className={`nav-link ${styles.navLink} px-2`} >سالنامه</a></Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/sets/[name]' as='/sets/ست های مدیریتی'><a className={`nav-link ${styles.navLink} px-2`} >ست های مدیریتی</a></Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/products/[name]' as='/products/قلم های نفیس Carteie'><a className={`nav-link ${styles.navLink} px-2`}>قلم های نفیس</a></Link>
+                                    </li>
+                                    <Link href="/about"><li>
+                                        <a className={`nav-link ${styles.navLink} px-2`} >درباره اداک</a>
+                                    </li></Link>
+                    
+                                    <Link href="/blog"><li className="nav-item px-2">
+                                        <a className={`nav-link ${styles.navLink} px-2`} >بلاگ</a>
+                                    </li></Link>
+                                  
+                                    {/* <li><a href="#">جاکلیدی</a></li>
                                     <li><a href="#"> جاکارتی ترموفلز</a></li>
                                     <li><a href="#">فلش مموری</a></li>
                                     <li><a href="#">ساعت مچی</a></li>
@@ -36,7 +57,7 @@ class Footer extends Component {
                                     <li><a href="#">مونوپاد</a></li>
                                     <li><a href="#">یادداشت</a></li>
                                     <li><a href="#">لیوان</a></li>
-                                    <li><a href="#">متر</a></li>
+                                    <li><a href="#">متر</a></li> */}
                                 </ul>
                             </div>
                         </div>
@@ -45,13 +66,13 @@ class Footer extends Component {
                         <h5 className={styles.title}>تماس</h5>
                         <address>
                             <i className={`fa fa-map-marker ${styles.green}`}></i>
-            خیابان جمهوری-نرسیده به میدان بهارستان-پلاک ۲۹ فروشگاه قلم
-          </address>
+                            خیابان جمهوری-نرسیده به میدان بهارستان-پلاک ۲۹ فروشگاه قلم
+                        </address>
                         <p className={styles.links}>
                             <i className={`fa fa-phone ${styles.green}`}></i>
 
                             <a href="tel:+982133995710"> 021-33995710</a> |
-            <a href="tel:+982133995831"> 021-33995831</a>
+                            <a href="tel:+982133995831"> 021-33995831</a>
                         </p>
                         <p className={styles.links}>
                             <i className={`fa fa-mobile ${styles.green}`}></i>
