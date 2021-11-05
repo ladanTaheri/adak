@@ -22,9 +22,7 @@ class Nav extends Component {
                         <li className="nav-item active">
                             <Link href="/"><a className={`nav-link ${styles.navLink} px-2`} >خانه <span className="sr-only">(current)</span></a></Link>
                         </li>
-                        <Link href="/about"><li className="nav-item">
-                            <a className={`nav-link ${styles.navLink} px-2`} >درباره اداک</a>
-                        </li></Link>
+                      
                         <li className="nav-item">
                             <Link href='/products/[name]' as='/products/سالنامه'><a className={`nav-link ${styles.navLink} px-2`} >سالنامه</a></Link>
                         </li>
@@ -34,14 +32,17 @@ class Nav extends Component {
                         <li className="nav-item">
                             <Link href='/products/[name]' as='/products/قلم های نفیس Carteie'><a className={`nav-link ${styles.navLink} px-2`}>قلم های نفیس</a></Link>
                         </li>
-                        <li className="nav-item">
+                        <Link href="/about"><li className="nav-item">
+                            <a className={`nav-link ${styles.navLink} px-2`} >درباره اداک</a>
+                        </li></Link>
+                        {/* <li className="nav-item">
                             <a className={`nav-link ${styles.navLink} px-2`} >سایر محصولات</a>
-                        </li>
+                        </li> */}
                         <Link href="/blog"><li className="nav-item px-2">
                             <a className={`nav-link ${styles.navLink} px-2`} >بلاگ</a>
                         </li></Link>
                         <Link href="/contact"><li className="nav-item px-2">
-                            <a className={`nav-link ${styles.navLink} px-2`}>تماس</a>
+                            <a className={`nav-link ${styles.navLink} px-2`}>تماس با اداک</a>
                         </li></Link>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
