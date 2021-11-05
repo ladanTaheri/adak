@@ -51,12 +51,13 @@ class Home extends Component {
         return (
             <Fragment>
                 <HeaderSlider />
-                <About />
-                <Idea />
+            
                 <SectionSlider title="سالنامه" items={calenders} />
                 <SectionSlider title="قلم های نفیس Carteie" items={pens} />
                 <Collection items={sets} title="ست های مدیریتی" />
                 <Catelogue/>
+                <Idea />
+                <About />
             </Fragment>
         );
     }
