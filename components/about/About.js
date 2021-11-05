@@ -3,7 +3,7 @@ import styles from './About.module.css';
 class About extends Component {
     state = {}
     render() {
-        return (
+           return (
             <section className={styles.main}>
                 <h1 className={`${styles.heading} pb-2`}>درباره اداک</h1>
                 <p>
