@@ -1,32 +1,30 @@
-import React, { Component } from 'react';
-import styles from '../Blog.module.css';
+import React, { Component } from "react";
+import styles from "../Blog.module.css";
+import { Fragment } from "react";
+import Link from 'next/link';
 
 class Item extends Component {
-    state = {
-        brief: true
-    }
-    handleClick = () => {
-        this.setState({ brief: !this.state.brief })
-    }
-    render() {
-        return (
-            <div className={styles.news}>
-                <h2> وب سایت اداک لانچ شد</h2>
-                <div className={styles.imgHoverZoom}>
-                    <img src={this.props.imgUrl} className={styles.imgMain} />
-                </div>
-                <div className={styles.date}>
-                    <p>1399/09/09 ,  تخمین زمان خواندن :2 دقیقه</p>
-                </div>
-                <p className={this.state.brief ? styles.showBrief : styles.showBrief.active}>   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است 
-                <br />
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-                <img src="/images/blog-bottom.png" className={styles.imgBottom} />
-                <button className={`btn ${styles.btn}`} onClick={this.handleClick}>{this.state.brief ? "  مشاهده بیشتر" : "مشاهده کمتر"}</button>
-            </div>
-
-        );
-    }
+  state = {
+    brief: true,
+  };
+  handleClick = () => {
+    this.setState({ brief: !this.state.brief });
+  };
+  render() {
+      const item ={
+          name:"عنوان"
+      }
+    return (
+      <Fragment>
+        <div className={styles.card}>
+            <img src={this.props.imgUrl} className={styles.image}/>
+            <h1 className={styles.heading}>عنوان</h1>
+            <p className={styles.shortText}> کوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتکوتاه متن اخباکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارراه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبارن اخبارکوتاه متن اخبارکوتاه متن اخبارکوتاه متن اخبار</p>
+            <Link href='/detail/[name]' as={`/detail/${item.name}`}><a  className={styles.btn}>مشاهده بیشتر</a></Link>
+        </div>
+      </Fragment>
+    );
+  }
 }
 
 export default Item;
