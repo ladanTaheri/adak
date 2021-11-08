@@ -1,14 +1,33 @@
 import React, { Component } from "react";
 import styles from "./Blog.module.css";
 import Item from "./item/Item";
+import { getAllNews } from './../../services/blogService';
+
 class Blog extends Component {
-  state = {};
+  state = {
+    blogs: [],
+  };
+  componentDidMount = () => {
+    this.handleGetBlogs();
+  };
+  handleGetBlogs = async () => {
+    try {
+      const { data, status } = await getAllNews();
+
+      if (status === 200) {
+        console.log("data");
+        console.log(data);
+        this.setState({ blogs: data });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
   render() {
     return (
       <div className={styles.cardWrapper}>
-        <Item imgUrl="/images/blog/blog2.jpg" />
-        <Item imgUrl="/images/blog/blog3.jpg" />
-        <Item imgUrl="/images/blog/blog3.jpg" />
+        {this.state.blogs.map((b)=> <Item data={b}/>)}
+   
       </div>
     );
   }
