@@ -19,7 +19,6 @@
 
 .image {
   width: 100%;
-  height: auto;
 }
 .heading {
   font-size: 28px;
@@ -76,6 +75,6 @@
   padding-right: 20px;
 }
 
-.footer{
-  padding-top: 4%;
-}
+/* .footer{
+  /* padding-top: 4%;
+} */
