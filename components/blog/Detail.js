@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { getNewsById } from "../../services/blogService";
 import styles from "./Detail.module.css";
 import config from '../../services/config.json';
+import moment from "moment-jalaali";
+
 
 class Detail extends Component {
   state = { blog: null };
@@ -38,9 +40,14 @@ class Detail extends Component {
           </div>
           <div className={styles.date}>
             <p>
+              <>
+              {this.state.blog ? moment(this.state.blog.published_at, 'YYYY-M-D HH:mm:ss').endOf('jMonth').format('jYYYY/jM/jD') : null} 
+
                , تخمین زمان خواندن :
               {this.state.blog ? this.state.blog.estimationReadTime : null}{" "}
               دقیقه
+
+            </>
             </p>
           </div>
           <p
