@@ -10,19 +10,18 @@ class Blog extends Component {
   componentDidMount = () => {
     this.handleGetBlogs();
   };
+  
   handleGetBlogs = async () => {
     try {
       const { data, status } = await getAllNews();
-
       if (status === 200) {
-        console.log("data");
-        console.log(data);
         this.setState({ blogs: data });
       }
     } catch (err) {
       console.error(err);
     }
   };
+
   render() {
     return (
       <div className={styles.cardWrapper}>
