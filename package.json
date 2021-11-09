@@ -12,6 +12,7 @@
     "bootstrap": "^4.5.3",
     "flickity": "^2.2.1",
     "font-awesome": "^4.7.0",
+    "moment-jalaali": "^0.9.2",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.0",
