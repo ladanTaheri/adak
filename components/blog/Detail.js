@@ -3,10 +3,11 @@ import { getNewsById } from "../../services/blogService";
 import styles from "./Detail.module.css";
 import config from '../../services/config.json';
 import moment from "moment-jalaali";
+import { stringFormatToArrayFormat } from './../../util/split';
 
 
 class Detail extends Component {
-  state = { blog: null };
+  state = { blog: null , tags:[] };
   componentDidMount = () => {
     this.handleGetBlog();
   };
@@ -18,6 +19,9 @@ class Detail extends Component {
         console.log("data");
         console.log(data);
         this.setState({ blog: data });
+        this.setState({ tags:  data.tags.stringFormatToArrayFormat() });
+       console.log('111' )
+       console.log(data.tags.stringFormatToArrayFormat() )
       }
     } catch (err) {
       console.error(err);
@@ -49,6 +53,7 @@ class Detail extends Component {
 
             </>
             </p>
+           
           </div>
           <p
             className={
@@ -57,6 +62,8 @@ class Detail extends Component {
           >
             {this.state.blog ? this.state.blog.description : null}
           </p>
+          <p>برچسب ها  :</p>
+          {this.state.blog ? stringFormatToArrayFormat(this.state.blog.tags).map((i)=><span className={styles.tag}>{i}</span>) : null}
         </div>
       </section>
     );
