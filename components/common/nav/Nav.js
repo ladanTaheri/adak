@@ -80,6 +80,9 @@ class Navig extends Component {
                                 <Link href="/about"><li className="nav-item">
                                     <a className={`nav-link ${styles.navLink} px-2`} >درباره اداک</a>
                                 </li></Link>
+                                <Link href="/contact"><li className="nav-item px-2">
+                                <a className={`nav-link ${styles.navLink} px-2`}>تماس با اداک</a>
+                            </li></Link>
 
                                 {/* *** */}
 
